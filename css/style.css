@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Css Variable stores */
+:root {
+    --brand-primary: #4CAF4F;
+    --brand-secondary: #263238;
+    --brand-info: #2194F3;
+    --neutral-black: #263238;
+    --neutral-grey: #89939E;
+    --neutral-silver: #F5F7FA;
+    --text-color: #4d4d4d;
+    --text-secondary-color: #717171;
+    --default-white: #fff;
+    --text-gray: #18191F;
+}
+
+/* Common design  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+p {
+    color: var(--text-secondary-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 76px;
+}
+
+h2 {
+    color: var(--neutral-d-grey, #4D4D4D);
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+}
+
+h3 {
+    color: var(--text-color);
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+h4 {
+    color: var(--neutral-grey);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.Smith {
+    color: var(--brand-primary);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.homepage {
+    background: var(--neutral-silver);
+}
+
+.logo {
+    display: flex;
+    gap: 8px;
+}
+
+.txts h1 span {
+    color: var(--brand-primary);
+}
+
+.container {
+    max-width: 1152px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 50px;
+}
+
+li a {
+    position: relative;
+}
+
+li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--brand-primary);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: .5s;
+}
+
+li a:hover:after {
+    width: 100%;
+}
+
+.icon-x {
+    display: none !important;
+}
+
+.signup {
+    display: flex;
+    gap: 15px;
+}
+
+.md-btn {
+    color: var(--default-white);
+    background: var(--brand-primary);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn {
+    color: var(--brand-primary);
+    background: var(--neutral-silver);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+.banner {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 100px);
+    justify-content: space-between;
+    padding: 0px 7px;
+}
+
+.banner p {
+    color: var(--text-secondary-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.btn-primary {
+    color: var(--default-white);
+    background: var(--brand-primary);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    color: var(--brand-primary, #4CAF4F);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 8px;
+    align-items: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+
+
+.company-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 7px;
+}
+
+
+
+.card-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    padding: 7px;
+    margin-top: 80px;
+}
+
+.card img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card h3 {
+    text-align: center;
+}
+
+.card p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card {
+    border-radius: 8px;
+    background: var(--neutral-white);
+    box-shadow: 0px 2px 4px 0px rgba(171, 190, 209, 0.308);
+    padding: 25px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.details {
+    padding-right: 60px;
+}
+
+.business-details {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 7px;
+}
+
+.business-details h2 span {
+    color: var(--brand-primary);
+}
+
+.business-details p {
+    color: var(--text-gray);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.singale-details {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    column-gap: 65px;
+    row-gap: 25px;
+}
+
+.details-local {
+    background: var(--neutral-silver);
+}
+
+
+
+.mobile-login {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.cm-logo {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.background {
+    background-color: var(--neutral-silver);
+    padding: 32px 0px;
+    margin: 50px 0px;
+}
+
+.cm-btn-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 7px;
+}
+
+.card-deatils {
+    text-align: center;
+}
+
+.card-deatils button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer {
+    background: var(--neutral-black);
+    padding: 64px 0px;
+}
+
+.grid-footer {
+    display: flex;
+    gap: 125px;
+}
+
+
+.social-media i {
+    font-size: 32px;
+    color: var(--default-white);
+    background-color: #515b60;
+    padding: 8px;
+    border-radius: 500px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.other-side {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+.other-side h4 {
+    color: var(--default-white);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 24px;
+}
+
+.other-side a {
+    color: var(--default-white);
+}
+
+.other-side p {
+    margin-bottom: 12px;
+}
+
+.cp-al {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.imgcard>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.card-deatils {
+    margin: -100px auto;
+    margin-bottom: -50px;
+    height: 300px;
+    width: 300px;
+    background-color: #1D1C20;
+    color: #fff;
+    padding: 20px;
+}
+
+
+.input {
+    padding: 10px;
+    background: #515b60;
+    border-radius: 8px;
+    display: flex;
+}
+
+.input i {
+    color: var(--default-white);
+}
+
+.input input {
+    background: #515b60;
+    border: none;
+    color: var(--default-white) !important;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+input:focus-visible {
+    outline: none;
+}
+
+.input input::placeholder {
+    color: var(--default-white);
+    opacity: 1;
+}
+
+.input input:-ms-input-placeholder {
+    color: var(--default-white);
+}
+
+.input input::-ms-input-placeholder {
+    color: var(--default-white);
+    ;
+}
+
+
+.card-image img {
+    width: 100%;
+    padding: 7px;
+}
+
+.main-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.main-card-text {
+    margin: -20% 10%;
+    text-align: center;
+    color: var(--neutral-grey) !important;
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--neutral-silver);
+    box-shadow: 0px 8px 16px 0px rgba(171, 190, 209, 0.40);
+}
+
+@media screen and (max-width:1000px) {
+    .navbar ul {
+        gap: 20px;
+    }
+
+    .cm-logo {
+        display: flex;
+        gap: 5px;
+    }
+
+
+    .card-group {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 70px;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 100px;
+    }
+
+    .social-media i {
+        font-size: 22px;
+        margin-right: 5px;
+    }
+
+    .grid-footer {
+        gap: 0px;
+    }
+
+    .cp-al {
+        margin-top: 22px;
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .icon-x {
+        color: var(--brand-secondary);
+        font-size: 28px;
+        cursor: pointer;
+        margin-left: 25px;
+        display: block !important;
+    }
+
+    .navbar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 0px;
+        padding-top: 20px;
+        background: var(--default-white);
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        z-index: 2;
+        transition: right 0.5s;
+        box-shadow: 0px 6px 12px 0px rgba(171, 190, 209, 0.30);
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    .banner {
+        flex-direction: column-reverse;
+        height: calc(100vh - 70px);
+        justify-content: space-evenly;
+    }
+
+    h1 {
+        color: var(--text-color);
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 60px;
+    }
+
+    .clients h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .details {
+        padding-right: 60px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .card-group {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+
+    .flex {
+        flex-direction: column;
+        gap: 0px;
+        padding: 7px;
+    }
+
+    .details {
+        padding-right: 0px;
+    }
+
+
+    .business-details {
+        flex-direction: column;
+        align-items: stretch;
+
+    }
+
+    .business-details p {
+        margin-bottom: 30px;
+    }
+
+
+    .mobile-login img {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cm-btn-logo {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .cm-logo {
+        gap: 30px;
+    }
+
+
+    .card-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 155px;
+    }
+
+
+
+    .social-media i {
+        font-size: 22px;
+        margin-right: 5px;
+    }
+
+    .grid-footer {
+        flex-direction: column;
+    }
+
+    .other-side {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .news img {
+        width: 100%;
+    }
+
+}
+
