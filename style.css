@@ -660,9 +660,12 @@ input:focus-visible {
         gap: 8px;
     }
 
-    .input{
-        /* margin-left: 25%; */
-        margin-right: 40%;
+    .input {
+        padding: 10px;
+        background: #515b60;
+        border-radius: 8px;
+        display: flex;
+        width: 65%;
     }
 
     .md-btn {
