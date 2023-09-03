@@ -412,11 +412,17 @@ li a:hover:after {
     background: #515b60;
     border-radius: 8px;
     display: flex;
-    width: 100%;
+    position: relative;
 }
+
+
 
 .input i {
     color: var(--default-white);
+    height: 100%;
+    right: 13px;
+    top: auto;
+    position: absolute;
 }
 
 .input input {
@@ -426,6 +432,8 @@ li a:hover:after {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
+    position: relative;
+    width: 100%;
 }
 
 
@@ -652,12 +660,9 @@ input:focus-visible {
         gap: 8px;
     }
 
-    .input {
-        padding: 10px;
-        background: #515b60;
-        border-radius: 8px;
-        display: flex;
-        width: 65%;
+    .input{
+        /* margin-left: 25%; */
+        margin-right: 40%;
     }
 
     .md-btn {
